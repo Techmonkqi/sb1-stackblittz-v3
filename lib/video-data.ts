@@ -1,0 +1,50 @@
+export const videos = [
+  {
+    id: "video1",
+    title: "Exploring Kaieteur Falls - Guyana's Natural Wonder",
+    thumbnail: "https://images.unsplash.com/photo-1565214975484-3cfa9e56f914?q=80&w=2000",
+    youtubeUrl: "https://www.youtube.com/embed/2vTxQy84BBw",
+    channelUrl: "https://www.youtube.com/@AdventureGuyana",
+    channelId: "UC1234567890",
+    description: "Experience the majesty of Kaieteur Falls, the world's highest single-drop waterfall. Join us as we explore this natural wonder and learn about its significance to Guyana's heritage.",
+    category: "Nature",
+    views: "15K",
+    duration: "10:23",
+    creator: "Adventure Guyana",
+    creatorAvatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400",
+    datePublished: "2024-03-15",
+    tags: ["Waterfall", "Nature", "Adventure", "Travel"]
+  },
+  {
+    id: "video2",
+    title: "Georgetown City Tour - Historical Sites & Culture",
+    thumbnail: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=2000",
+    youtubeUrl: "https://www.youtube.com/embed/K72Ey4JWVCk",
+    channelUrl: "https://www.youtube.com/@GuyanaCultureGuide",
+    channelId: "UC0987654321",
+    description: "Walk through Georgetown's historic streets and discover its colonial architecture. This comprehensive city tour covers all the major landmarks and cultural sites.",
+    category: "Culture",
+    views: "8.5K",
+    duration: "15:45",
+    creator: "Guyana Culture Guide",
+    creatorAvatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400",
+    datePublished: "2024-03-14",
+    tags: ["Culture", "History", "City Tour", "Architecture"]
+  },
+  {
+    id: "video3",
+    title: "Rupununi Safari - Wildlife Adventure in Guyana",
+    thumbnail: "https://images.unsplash.com/photo-1542401886-65d6c61db217?q=80&w=2000",
+    youtubeUrl: "https://www.youtube.com/embed/L9EEcr6Y9os",
+    channelUrl: "https://www.youtube.com/@WildGuyana",
+    channelId: "UC5678901234",
+    description: "Join us on an incredible safari through the Rupununi savannah, where we encounter diverse wildlife and experience the unique ecosystem of Guyana's interior.",
+    category: "Wildlife",
+    views: "12K",
+    duration: "20:30",
+    creator: "Wild Guyana",
+    creatorAvatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400",
+    datePublished: "2024-03-13",
+    tags: ["Wildlife", "Safari", "Nature", "Adventure"]
+  }
+]

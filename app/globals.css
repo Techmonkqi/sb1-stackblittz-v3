@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Enhanced Animations and Hover Effects */
+@layer utilities {
+  .hover-lift {
+    @apply transition-transform duration-300 ease-out;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px);
+  }
+
+  .hover-scale {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+    @apply shadow-lg;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .hover-glow:hover {
+    @apply shadow-lg;
+    box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.3);
+  }
+
+  .click-shrink {
+    @apply transition-transform duration-150 ease-out active:scale-95;
+  }
+
+  .click-bounce {
+    @apply transition-transform duration-150 ease-out;
+  }
+  
+  .click-bounce:active {
+    transform: scale(0.95);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Enhanced Card Interactions */
+.card-hover-effect {
+  @apply transition-all duration-300 ease-out;
+  transform: translateY(0) scale(1);
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-8px) scale(1.02);
+  @apply shadow-xl;
+}
+
+/* Enhanced Button Interactions */
+.button-hover-effect {
+  @apply relative overflow-hidden transition-all duration-300 ease-out;
+}
+
+.button-hover-effect::after {
+  content: '';
+  @apply absolute inset-0 bg-white opacity-0 transition-opacity duration-300 ease-out;
+}
+
+.button-hover-effect:hover {
+  @apply transform scale-105 shadow-md;
+}
+
+.button-hover-effect:hover::after {
+  @apply opacity-20;
+}
+
+.button-hover-effect:active {
+  @apply transform scale-95;
+  transition-duration: 150ms;
+}
+
+/* Enhanced Navigation Link Effects */
+.nav-link {
+  @apply relative transition-all duration-300 ease-out;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 ease-out;
+}
+
+.nav-link:hover {
+  @apply text-primary transform scale-105;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+/* Enhanced Social Button Effects */
+.social-button {
+  @apply transition-all duration-300 ease-out;
+}
+
+.social-button:hover {
+  @apply transform scale-110 rotate-6 shadow-lg;
+}
+
+.social-button:active {
+  @apply transform scale-95 rotate-0;
+}
+
+/* Enhanced Image Hover Effects */
+.image-hover {
+  @apply transition-all duration-500 ease-out;
+}
+
+.image-hover:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Enhanced Category Card Effects */
+.category-card {
+  @apply transition-all duration-300 ease-out;
+}
+
+.category-card:hover {
+  @apply transform -translate-y-2 shadow-lg;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Enhanced Like Button Effects */
+.like-button {
+  @apply transition-all duration-300 ease-out;
+}
+
+.like-button:hover {
+  @apply transform scale-110;
+  filter: brightness(1.2);
+}
+
+.like-button:active {
+  @apply transform scale-90;
+  transition-duration: 150ms;
+}
+
+/* Pulse Animation for Interactive Elements */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(var(--primary-rgb), 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0);
+  }
+}
+
+.pulse-on-hover:hover {
+  animation: pulse 1.5s infinite;
+}
